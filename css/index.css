@@ -172,8 +172,18 @@ section {
   border-bottom: 1px solid #ddd;
   margin: 0 2rem;
 }
+section .project,
+section .reference,
+section .exp {
+  margin: 0 1rem;
+}
 main {
   display: flex;
+}
+@media (max-width: 500px) {
+  main {
+    flex-direction: column;
+  }
 }
 main .container {
   display: flex;
@@ -181,15 +191,38 @@ main .container {
   padding: 0 1rem 0 0;
   width: 80%;
 }
+@media (max-width: 500px) {
+  main .container {
+    width: 100%;
+  }
+}
 main aside {
   width: 20%;
   border-left: 1px solid #ddd;
-  margin: 1rem 0 0 0;
-  padding: 0 1rem 0 0;
+  margin: 0 1rem 0 1rem;
+  padding: 0 1rem 0 1rem;
+}
+@media (max-width: 500px) {
+  main aside {
+    width: 100%;
+    border: none;
+  }
+  main aside .skills-container {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+  }
+  main aside .skill-group {
+    width: 33%;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 1px solid #ddd;
+    overflow: auto;
+  }
 }
 main aside h2 {
   text-align: center;
 }
-main aside .skill-group {
-  padding: 1rem 0;
+main aside .skill-group p {
+  padding: 0 1rem 0 0;
 }

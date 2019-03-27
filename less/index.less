@@ -95,11 +95,22 @@ header{
 section{
 	border-bottom: 1px solid @color-2;
 	margin:0 2rem;
+
+	.project,.reference,.exp{
+		margin:0 1rem;
+	}
 }
 
 main{
 	display:flex;
+
+	@media(max-width : 500px){
+		flex-direction: column;
+	}
 	.container{
+		@media(max-width : 500px){
+			width:100%;
+		}
 		display:flex;
 		flex-direction:column;
 		padding:0 1rem 0 0;
@@ -122,15 +133,33 @@ main{
 		}
 	}
 	aside{
+		@media(max-width : 500px){
+			width:100%;
+			border:none;
+			.skills-container{
+				display:flex;
+				flex-direction:wrap;
+				justify-content: space-between;
+			}
+			.skill-group{
+				width:33%;
+				padding:1rem;
+				margin:.5rem;
+				border:1px solid @color-2;
+				overflow:auto;
+			}
+		}
 		width:20%;
 		border-left: 1px solid @color-2;
-		margin:1rem 0 0 0;
-		padding:0 1rem 0 0;
+		margin:0 1rem 0 1rem;
+		padding:0 1rem 0 1rem;
 		h2{
 			text-align:center;
 		}
 		.skill-group{
-			padding:1rem 0;
+			p{
+				padding:0 1rem 0 0;
+			}
 		}
 	}
 }
