@@ -4,6 +4,7 @@
    License: none (public domain)
 */
 
+@red = #ff0000;
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -53,13 +54,90 @@ table {
 * {
     box-sizing: border-box;
 }
-//variables
-@color-red:red;
+@color-1 : #666;
+@color-2 : #ddd;
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size:62.5%;
 }
 
-body{
-	background:@color-red;
+h1,h2,h3{
+	color:@color-1;
+	padding:1rem 0 0 0;
+	font-size:2.5rem;
 }
+
+h2{
+	text-decoration:underline;
+}
+h3{
+	font-size:2rem;
+}
+p{
+	padding:.5rem;
+	font-size:1.6rem;
+}
+header, main, footer{
+	max-width:1000px;
+	width:100%;
+	margin:auto;
+}
+
+header{
+	width:100%;
+	border-bottom:1px solid #ddd;
+	h1{
+		padding:2rem 0;
+		font-size: 3rem;
+	}
+}
+
+section{
+	border-bottom: 1px solid @color-2;
+	margin:0 2rem;
+}
+
+main{
+	display:flex;
+	.container{
+		display:flex;
+		flex-direction:column;
+		padding:0 1rem 0 0;
+		width:80%;
+
+		.objective{
+
+		}
+
+		.experience{
+
+		}
+
+		.project-history{
+
+		}
+
+		.references{
+
+		}
+	}
+	aside{
+		width:20%;
+		border-left: 1px solid @color-2;
+		margin:1rem 0 0 0;
+		padding:0 1rem 0 0;
+		h2{
+			text-align:center;
+		}
+		.skill-group{
+			padding:1rem 0;
+		}
+	}
+}
+
+
+
+
+
+
 
