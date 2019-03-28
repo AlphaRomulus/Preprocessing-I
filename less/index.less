@@ -3,9 +3,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
-@red = #ff0000;
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -74,8 +71,12 @@ h3{
 	font-size:2rem;
 }
 p{
-	padding:.5rem;
+	padding:.5rem 0;
 	font-size:1.6rem;
+}
+img{
+	width:100%;
+	height:auto;
 }
 header, main, footer{
 	max-width:1000px;
@@ -95,13 +96,13 @@ header{
 section{
 	border-bottom: 1px solid @color-2;
 	margin:0 2rem;
-
-	.project,.reference,.exp{
+	.reference,.exp{
 		margin:0 1rem;
 	}
 }
 
 main{
+	margin-top:1rem;
 	display:flex;
 
 	@media(max-width : 500px){
@@ -113,58 +114,89 @@ main{
 		}
 		display:flex;
 		flex-direction:column;
-		padding:0 1rem 0 0;
 		width:80%;
-
-		.objective{
-
-		}
-
-		.experience{
-
-		}
-
-		.project-history{
-
-		}
-
-		.references{
-
-		}
-	}
-	aside{
-		@media(max-width : 500px){
-			width:100%;
-			border:none;
-			.skills-container{
-				display:flex;
-				flex-direction:wrap;
-				justify-content: space-between;
-			}
-			.skill-group{
-				width:33%;
-				padding:1rem;
-				margin:.5rem;
-				border:1px solid @color-2;
-				overflow:auto;
-			}
-		}
-		width:20%;
-		border-left: 1px solid @color-2;
-		margin:0 1rem 0 1rem;
-		padding:0 1rem 0 1rem;
-		h2{
-			text-align:center;
-		}
-		.skill-group{
-			p{
-				padding:0 1rem 0 0;
-			}
-		}
 	}
 }
 
 
+
+.project{
+	margin-top:1rem;
+	display:flex;
+	border-bottom:1px solid @color-2;
+
+	.project-data{
+		width:60%;
+	}
+	.project-image{
+		width:40%;
+		order:-1;
+	}
+
+	span{
+		width:100%;
+		display:flex;
+		justify-content: space-between;
+		p{
+			font-size:1rem;
+		}
+		div{
+			display:flex;
+			p{
+				margin:0 .2rem;
+			}
+		}
+	}
+
+	@media(max-width: 800px){
+		flex-direction: column;
+		align-items:center;
+		.project-data, .project-image{
+			width:100%;
+		}
+	}
+	@media(max-width: 500px){
+		
+	}
+}
+
+aside{
+	width:20%;
+	border-left: 1px solid @color-2;
+
+	h2{
+		text-align:center;
+	}
+	.skill-group{
+		p{
+			padding:0 1rem 0 0;
+		}
+	}
+
+	@media(max-width : 500px){
+		width:100%;
+		border:none;
+		.skills-container{
+			display:flex;
+			flex-wrap:wrap;
+			justify-content: space-between;
+			align-content: center;
+		}
+		.skill-group{
+			width:46%;
+			padding:0 1rem;
+			margin:2%;
+			border:1px solid @color-2;
+			border-radius:.5rem;
+		}
+
+		h3{
+			text-align:center;
+			text-decoration: Underline;
+		}
+		p{margin:.5rem}
+	}		
+}
 
 
 

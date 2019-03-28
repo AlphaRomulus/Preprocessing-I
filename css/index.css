@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@red = #ff0000;
 html,
 body,
 div,
@@ -150,8 +149,12 @@ h3 {
   font-size: 2rem;
 }
 p {
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   font-size: 1.6rem;
+}
+img {
+  width: 100%;
+  height: auto;
 }
 header,
 main,
@@ -172,12 +175,12 @@ section {
   border-bottom: 1px solid #ddd;
   margin: 0 2rem;
 }
-section .project,
 section .reference,
 section .exp {
   margin: 0 1rem;
 }
 main {
+  margin-top: 1rem;
   display: flex;
 }
 @media (max-width: 500px) {
@@ -188,7 +191,6 @@ main {
 main .container {
   display: flex;
   flex-direction: column;
-  padding: 0 1rem 0 0;
   width: 80%;
 }
 @media (max-width: 500px) {
@@ -196,33 +198,75 @@ main .container {
     width: 100%;
   }
 }
-main aside {
+.project {
+  margin-top: 1rem;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+.project .project-data {
+  width: 60%;
+}
+.project .project-image {
+  width: 40%;
+  order: -1;
+}
+.project span {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.project span p {
+  font-size: 1rem;
+}
+.project span div {
+  display: flex;
+}
+.project span div p {
+  margin: 0 0.2rem;
+}
+@media (max-width: 800px) {
+  .project {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project .project-data,
+  .project .project-image {
+    width: 100%;
+  }
+}
+aside {
   width: 20%;
   border-left: 1px solid #ddd;
-  margin: 0 1rem 0 1rem;
-  padding: 0 1rem 0 1rem;
+}
+aside h2 {
+  text-align: center;
+}
+aside .skill-group p {
+  padding: 0 1rem 0 0;
 }
 @media (max-width: 500px) {
-  main aside {
+  aside {
     width: 100%;
     border: none;
   }
-  main aside .skills-container {
+  aside .skills-container {
     display: flex;
-    flex-direction: wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-content: center;
   }
-  main aside .skill-group {
-    width: 33%;
-    padding: 1rem;
-    margin: 0.5rem;
+  aside .skill-group {
+    width: 46%;
+    padding: 0 1rem;
+    margin: 2%;
     border: 1px solid #ddd;
-    overflow: auto;
+    border-radius: 0.5rem;
   }
-}
-main aside h2 {
-  text-align: center;
-}
-main aside .skill-group p {
-  padding: 0 1rem 0 0;
+  aside h3 {
+    text-align: center;
+    text-decoration: Underline;
+  }
+  aside p {
+    margin: 0.5rem;
+  }
 }
